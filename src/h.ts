@@ -22,7 +22,9 @@ function addNS(
   }
 }
 
-export function h(sel: string): VNode;
+// ts 支持export多个同名函数，表示函数重载所需要的不同入参的类型
+// js 不支持export多个同名函数
+export function h(sel: string): VNode; // 空标签
 export function h(sel: string, data: VNodeData | null): VNode;
 export function h(sel: string, children: VNodeChildren): VNode;
 export function h(
